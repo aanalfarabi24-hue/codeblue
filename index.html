@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💕 Untuk Orang Terpenting | Private</title>
+  <style>
+    :root{
+      --bg0:#171017;
+      --bg1:#291724;
+      --bg2:#3a2030;
+      --card:rgba(46,24,37,.76);
+      --card2:rgba(32,14,26,.88);
+      --text:#fff7fb;
+      --muted:#f0cad7;
+      --mint:#ff9cc7;
+      --mint2:#ff6fa8;
+      --pink:#ffd0df;
+      --pink2:#ff8fbd;
+      --red:#ff9aa4;
+      --ring:rgba(255,156,199,.2);
+      --shadow:0 20px 60px rgba(44,14,32,.34);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,156,199,.15), transparent 26%),
+        radial-gradient(circle at 80% 18%, rgba(255,208,223,.16), transparent 24%),
+        radial-gradient(circle at 50% 92%, rgba(255,143,189,.1), transparent 32%),
+        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg0) 100%);
+      overflow-x: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 100% 34px, 34px 100%;
+      opacity: .18;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.05));
+      z-index: 0;
+    }
+
+    body::after{
+      content:"";
+      position: fixed;
+      inset: -20%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255,255,255,.05), transparent 55%);
+      animation: driftGlow 18s ease-in-out infinite alternate;
+      z-index: 0;
+      opacity: .45;
+    }
+
+    @keyframes driftGlow {
+      from { transform: translate3d(-2%, -1%, 0) scale(1); }
+      to   { transform: translate3d(2%, 1%, 0) scale(1.08); }
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(34px);
+      opacity: .45;
+      pointer-events: none;
+      z-index: 0;
+      animation: orbFloat 10s ease-in-out infinite;
+    }
+    .orb.one { width: 220px; height: 220px; left: -60px; top: 10%; background: rgba(255,156,199,.15); }
+    .orb.two { width: 260px; height: 260px; right: -90px; top: 18%; background: rgba(255,208,223,.14); animation-duration: 13s; }
+    .orb.three { width: 280px; height: 280px; left: 18%; bottom: -120px; background: rgba(255,143,189,.1); animation-duration: 15s; }
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-18px) scale(1.08); }
+    }
+
+    @keyframes float-balloon {
+      0% { transform: translateY(0) scale(.9); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.15); opacity: 0; }
+    }
+    .love-balloon {
+      position: fixed;
+      font-size: 22px;
+      pointer-events: none;
+      z-index: 1;
+      animation: float-balloon linear infinite;
+      text-shadow: 0 0 10px rgba(255,121,201,.45);
+      user-select: none;
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 0 12px rgba(255,255,255,.85);
+      pointer-events: none;
+      z-index: 1;
+      animation: sparkle 2.2s ease-in-out forwards;
+      opacity: .9;
+    }
+    @keyframes sparkle {
+      0% { transform: scale(.4); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    .lock-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background:
+        radial-gradient(circle at top, rgba(255,156,199,.10), transparent 24%),
+        radial-gradient(circle at 85% 18%, rgba(255,208,223,.12), transparent 22%),
+        radial-gradient(circle at 15% 80%, rgba(255,143,189,.08), transparent 26%),
+        linear-gradient(135deg, rgba(24,12,20,.98), rgba(44,18,31,.98));
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+
+    .lock-screen::before{
+      content:"";
+      position:absolute;
+      inset:-30%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.05), transparent 28%),
+        linear-gradient(120deg, transparent 0%, rgba(255,156,199,.14) 35%, rgba(255,232,238,.22) 50%, rgba(255,143,189,.1) 65%, transparent 100%);
+      opacity:.45;
+      animation: lockSweep 9s linear infinite;
+      pointer-events:none;
+    }
+    .lock-screen::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(255,255,255,.03) 50%, transparent 100%);
+      animation: lockScan 2.6s ease-in-out infinite;
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+    @keyframes lockSweep {
+      from { transform: translateX(-12%) rotate(0deg); }
+      to { transform: translateX(12%) rotate(18deg); }
+    }
+    @keyframes lockScan {
+      0%,100% { transform: translateY(-10px); opacity:.18; }
+      50% { transform: translateY(10px); opacity:.55; }
+    }
+
+    .hacker-rain{
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .88;
+      mix-blend-mode: screen;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      color: rgba(255,156,199,.82);
+      text-shadow: 0 0 10px rgba(255,156,199,.24);
+    }
+    .hacker-rain .stream{
+      position: absolute;
+      top: -20vh;
+      white-space: pre;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 15px;
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: hackerFall linear infinite;
+      filter: blur(.1px);
+      transform: translateZ(0);
+    }
+    @keyframes hackerFall{
+      0%   { transform: translateY(-15vh); opacity: 0; }
+      8%   { opacity: .9; }
+      92%  { opacity: .65; }
+      100% { transform: translateY(125vh); opacity: 0; }
+    }
+    .hacker-rain .stream:nth-child(odd){
+      color: rgba(255,121,201,.55);
+      text-shadow: 0 0 10px rgba(255,121,201,.18);
+    }
+
+    .lock-card {
+      max-width: 620px;
+      width: 100%;
+      padding: 42px 38px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,156,199,.22);
+      background: linear-gradient(135deg, rgba(48,22,37,.92), rgba(28,13,23,.86));
+      backdrop-filter: blur(20px);
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: cardFloat 7s ease-in-out infinite, cardPop .95s cubic-bezier(.16,.84,.22,1) both;
+    }
+    @keyframes cardPop {
+      0% { opacity: 0; transform: scale(.78) translateY(18px) rotate(-2deg); filter: blur(6px); }
+      65% { opacity: 1; transform: scale(1.03) translateY(-4px) rotate(1deg); filter: blur(0); }
+      100% { opacity: 1; transform: scale(1) translateY(0) rotate(0); }
+    }
+
+    .lock-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,156,199,.14) 35%, rgba(255,232,238,.2) 50%, rgba(255,143,189,.1) 65%, transparent 100%);
+      transform: translateX(-40%);
+      animation: sheen 4.8s linear infinite;
+      pointer-events:none;
+      opacity:.9;
+    }
+    .lock-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,.03) 50%, transparent 100%);
+      animation: scan 2.8s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes sheen { from { transform: translateX(-70%); } to { transform: translateX(70%); } }
+    @keyframes scan { 0%,100% { transform: translateY(-5px); opacity:.35; } 50% { transform: translateY(5px); opacity:.88; } }
+    @keyframes cardFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-6px) scale(1.01); } }
+
+    .lock-card > * { position: relative; z-index: 1; }
+    .lock-card > *:not(h1) { animation: fadeLift .8s ease both; }
+    .lock-card > *:nth-child(2) { animation-delay: .08s; }
+    .lock-card > *:nth-child(3) { animation-delay: .14s; }
+    .lock-card > *:nth-child(4) { animation-delay: .20s; }
+    @keyframes fadeLift {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .lock-card h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      margin: 0 0 16px;
+      color: var(--mint);
+      text-shadow: 0 0 22px rgba(255,156,199,.42);
+      letter-spacing: .8px;
+      animation: titlePulse 2.8s ease-in-out infinite, titleFlicker 6s linear infinite, titleBoom 4.8s ease-in-out infinite;
+    }
+    @keyframes titleBoom {
+      0%,100% { transform: translateY(0) scale(1); }
+      30% { transform: translateY(-3px) scale(1.02); }
+      40% { transform: translateY(1px) scale(.99); }
+      55% { transform: translateY(-2px) scale(1.01); }
+    }
+    @keyframes titlePulse {
+      0%,100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 0 rgba(255,156,199,.18)); }
+      50% { transform: translateY(-3px) scale(1.01); filter: drop-shadow(0 0 18px rgba(255,156,199,.35)); }
+    }
+    @keyframes titleFlicker {
+      0%, 100% { opacity: 1; }
+      7% { opacity: .9; }
+      8% { opacity: 1; }
+      16% { opacity: .96; }
+      17% { opacity: 1; }
+      65% { opacity: .98; }
+      66% { opacity: 1; }
+    }
+
+    .lock-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 30px;
+      font-size: 16px;
+    }
+
+    .lock-card input,
+    .section-input {
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,156,199,.22);
+      background: rgba(0,0,0,.26);
+      color: var(--text);
+      font-size: 16px;
+      outline: none;
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .lock-card input:focus,
+    .section-input:focus{
+      border-color: rgba(255,156,199,.5);
+      box-shadow: 0 0 0 4px rgba(255,156,199,.08);
+      background: rgba(0,0,0,.35);
+      transform: translateY(-1px);
+    }
+    .lock-card input::placeholder,
+    .section-input::placeholder { color: #7e8fa4; }
+
+    .lock-card button,
+    .btn,
+    .music-toggle,
+    .close-btn {
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease, background .25s ease;
+    }
+
+    .lock-card button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--mint), var(--mint2));
+      color: #04110a;
+      box-shadow: 0 12px 30px rgba(255,156,199,.16);
+    }
+    .lock-card button:hover,
+    .btn-primary:hover,
+    .music-toggle:hover,
+    .close-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(255,156,199,.18);
+    }
+
+    .error-msg {
+      color: var(--red);
+      font-size: 14px;
+      margin-top: 10px;
+      min-height: 20px;
+    }
+
+    #app {
+      display: none;
+      padding: 28px 18px 60px;
+      max-width: 980px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 0 auto 22px;
+      padding: 12px 14px;
+      max-width: 980px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,156,199,.18);
+      background: rgba(49,22,35,.62);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+    .topbar .badge {
+      flex: 0 0 auto;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,156,199,.16);
+      color: #fff5fa;
+      font-size: 12px;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+    .topbar .track {
+      position: relative;
+      flex: 1;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      overflow: hidden;
+    }
+    .topbar .track span{
+      display:block;
+      height:100%;
+      width:0%;
+      border-radius:999px;
+      background: linear-gradient(90deg, #ffb3cd, #ffd7c2);
+      box-shadow: 0 0 18px rgba(255,156,199,.24);
+      transition: width .45s ease;
+    }
+    .topbar .step {
+      flex: 0 0 auto;
+      font-size: 12px;
+      color: var(--muted);
+      min-width: 56px;
+      text-align: right;
+    }
+
+    .section-container {
+      display: none;
+      margin-bottom: 28px;
+      animation: sectionIn .75s cubic-bezier(.2,.75,.2,1);
+    }
+    .section-container.active { display: block; }
+
+    @keyframes sectionIn {
+      from { opacity: 0; transform: translateY(18px) scale(.98); filter: blur(4px); }
+      to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    }
+
+    .section {
+      border-radius: 26px;
+      border: 1px solid rgba(255,156,199,.14);
+      background: linear-gradient(180deg, rgba(44,22,35,.88), rgba(26,12,22,.8));
+      padding: 30px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background: radial-gradient(circle at top right, rgba(255,156,199,.18), transparent 38%),
+                  radial-gradient(circle at bottom left, rgba(255,208,223,.15), transparent 30%);
+      pointer-events:none;
+    }
+
+    .section > * { position: relative; z-index: 1; }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(24px, 5vw, 40px);
+      color: var(--mint);
+      text-shadow: 0 0 14px rgba(255,156,199,.18);
+    }
+
+    .section-text {
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .section-input {
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      font-family: inherit;
+    }
+
+    textarea.section-input {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      width: 100%;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--mint), var(--mint2));
+      color: #04110a;
+      box-shadow: 0 12px 24px rgba(255,156,199,.16);
+    }
+
+    .music-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .music-text {
+      color: var(--muted);
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .music-toggle {
+      background: linear-gradient(135deg, #ffadc8, #ff7fb4);
+      color: white;
+      padding: 11px 18px;
+      min-width: 190px;
+      box-shadow: 0 12px 28px rgba(255,156,199,.16);
+    }
+
+    .music-player {
+      display: none;
+      width: 100%;
+      background: rgba(47,19,31,.28);
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,156,199,.16);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+      flex-direction: column;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .music-player.show { display: flex; animation: playerDrop .5s ease; }
+    @keyframes playerDrop {
+      from { opacity: 0; transform: translateY(-10px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .now-playing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .equalizer {
+      display: inline-flex;
+      gap: 4px;
+      height: 18px;
+      align-items: flex-end;
+    }
+    .equalizer span{
+      width: 4px;
+      height: 6px;
+      border-radius: 99px;
+      background: linear-gradient(180deg, var(--mint), var(--pink));
+      opacity: .35;
+      transform-origin: bottom;
+    }
+    .music-player.playing .equalizer span{
+      animation: eq 1s ease-in-out infinite;
+      opacity: 1;
+    }
+    .music-player.playing .equalizer span:nth-child(2){ animation-delay: .12s; }
+    .music-player.playing .equalizer span:nth-child(3){ animation-delay: .24s; }
+    .music-player.playing .equalizer span:nth-child(4){ animation-delay: .36s; }
+    .music-player.playing .equalizer span:nth-child(5){ animation-delay: .48s; }
+    @keyframes eq {
+      0%, 100% { height: 6px; }
+      50% { height: 18px; }
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    .gallery {
+      display: block;
+      position: relative;
+      min-height: min(78vh, 740px);
+    }
+
+    .photo-container {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: min(78vh, 740px);
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(52,22,37,.42);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+      transform-origin: center;
+    }
+    .photo-container.active {
+      display: flex;
+      animation: photoZoomIn 1.15s cubic-bezier(.18,.8,.18,1);
+    }
+
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      animation: imgFloat 10s ease-in-out infinite;
+      filter: saturate(1.06) contrast(1.05) brightness(1.03);
+      transform-origin: center;
+    }
+    @keyframes photoZoomIn {
+      from { opacity: 0; transform: scale(.72) rotate(-.8deg); filter: blur(4px) saturate(.78); }
+      62% { opacity: 1; filter: blur(0) saturate(1.04); }
+      to { opacity: 1; transform: scale(1.02) rotate(0deg); }
+    }
+    @keyframes imgFloat {
+      0%,100% { transform: scale(1.01); }
+      50% { transform: scale(1.08); }
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 18px 18px 20px;
+      background: linear-gradient(180deg, transparent, rgba(35,14,24,.96));
+      color: #fff7fb;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 88px;
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      animation: slideUp .7s ease .2s both;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .caption-typed{
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .caption-cursor{
+      display:inline-block;
+      margin-left: 2px;
+      color: var(--mint);
+      animation: blink .9s step-end infinite;
+      transform: translateY(1px);
+    }
+
+    .gallery-counter {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 14px;
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+
+    .counter {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+
+    .counter-item {
+      background: rgba(0,0,0,.24);
+      padding: 18px 12px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid rgba(255,156,199,.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .counter-item::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,156,199,.08) 50%, transparent 100%);
+      transform: translateX(-120%);
+      animation: shine 6s linear infinite;
+    }
+    @keyframes shine {
+      0% { transform: translateX(-120%); }
+      30%,100% { transform: translateX(120%); }
+    }
+
+    .counter-number {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--mint);
+      text-shadow: 0 0 15px rgba(255,156,199,.35);
+      animation: pulse 1.8s ease-in-out infinite;
+      position: relative;
+      z-index: 1;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .counter-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .message-box {
+      background: rgba(54,22,37,.34);
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,156,199,.18);
+    }
+
+    .message-content {
+      display: none;
+      color: #dce8f6;
+      line-height: 2;
+      font-size: 15px;
+      text-align: justify;
+      max-height: 500px;
+      overflow-y: auto;
+      position: relative;
+      word-wrap: break-word;
+      padding-right: 4px;
+    }
+    .message-content.show { display: block; }
+    .typing-cursor{
+      display:inline-block;
+      width: 8px;
+      margin-left: 2px;
+      color: var(--mint);
+      animation: blink .9s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .final-gate{
+      display: none;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(8px) scale(.98);
+    }
+    .final-gate.show{
+      display: block;
+      animation: finalGateIn .8s cubic-bezier(.16,.84,.22,1) forwards;
+    }
+    @keyframes finalGateIn{
+      0% { opacity: 0; transform: translateY(10px) scale(.96); }
+      65% { opacity: 1; transform: translateY(-2px) scale(1.02); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .close-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(255,156,199,.12), transparent 18%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.08), transparent 28%),
+        rgba(26,11,18,.94);
+      backdrop-filter: blur(7px);
+      overflow:hidden;
+    }
+    .close-screen::before{
+      content:"";
+      position:absolute;
+      inset:-20%;
+      background:
+        radial-gradient(circle, rgba(255,156,199,.16), transparent 26%),
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,.18) 48%, transparent 52%);
+      animation: closeBoom 1.4s ease-in-out infinite;
+      opacity:.65;
+      pointer-events:none;
+    }
+    .close-screen.show { display: flex; }
+
+    .close-content {
+      text-align: center;
+      animation: closePop .65s ease-out both, closeShake 1s ease-in-out infinite .55s;
+      padding: 20px;
+      position:relative;
+      z-index:1;
+    }
+
+    @keyframes closePop {
+      0% { transform: scale(.45) rotate(-10deg); opacity: 0; filter: blur(5px); }
+      60% { transform: scale(1.1) rotate(2deg); opacity: 1; filter: blur(0); }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
+    }
+    @keyframes closeShake {
+      0%,100% { transform: translate(0) scale(1); }
+      10% { transform: translate(-4px, 2px) scale(1.01); }
+      20% { transform: translate(5px, -3px) scale(.99); }
+      30% { transform: translate(-6px, 4px) scale(1.02); }
+      40% { transform: translate(6px, 2px) scale(1.01); }
+      50% { transform: translate(-3px, -4px) scale(.99); }
+      60% { transform: translate(4px, 3px) scale(1.02); }
+      70% { transform: translate(-4px, -2px) scale(.995); }
+      80% { transform: translate(3px, 4px) scale(1.01); }
+      90% { transform: translate(-2px, 1px) scale(.997); }
+    }
+    @keyframes closeBoom{
+      0%,100% { transform: scale(.98) rotate(0deg); opacity:.34; }
+      50% { transform: scale(1.04) rotate(2deg); opacity:.7; }
+    }
+
+    .close-content h2 {
+      font-size: clamp(28px, 6vw, 48px);
+      margin: 0 0 20px;
+      color: var(--red);
+      text-shadow: 0 0 20px rgba(255,156,199,.35);
+      animation: closeTextBoom .75s ease-out both, closeShake 1s ease-in-out infinite .35s;
+    }
+    @keyframes closeTextBoom{
+      0% { transform: scale(.35) rotate(-18deg); letter-spacing: .25em; opacity: 0; }
+      60% { transform: scale(1.16) rotate(4deg); letter-spacing: .06em; opacity: 1; }
+      100% { transform: scale(1) rotate(0); letter-spacing: normal; opacity: 1; }
+    }
+
+    .close-content p{
+      animation: closeShake 1s ease-in-out infinite .45s;
+    }
+
+    .close-btn {
+      margin-top: 28px;
+      padding: 12px 26px;
+      background: linear-gradient(135deg, #ff9cc7, #ff7eab);
+      color: white;
+      box-shadow: 0 12px 24px rgba(255,156,199,.14);
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%) translateY(18px);
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(5,9,17,.86);
+      color: var(--text);
+      border: 1px solid rgba(255,156,199,.16);
+      box-shadow: var(--shadow);
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease;
+      max-width: min(92vw, 560px);
+      text-align: center;
+      font-size: 14px;
+    }
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      .lock-card { padding: 32px 20px; border-radius: 22px; }
+      .section { padding: 20px; border-radius: 22px; }
+      .counter { grid-template-columns: repeat(2, 1fr); }
+      .photo-container { height: 360px; }
+      .gallery { min-height: 360px; }
+      .topbar { top: 8px; border-radius: 18px; padding: 10px 12px; }
+      .topbar .step { min-width: 44px; }
+      .gallery-nav { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+
+  <div id="lockScreen" class="lock-screen">
+    <div class="hacker-rain" aria-hidden="true"></div>
+    <div class="lock-card">
+      <h1>💕 HAI ORANG TUA</h1>
+      <p>For a special someone like you, I have something for you sayangku, ayo masukin kata kunci, cluenya panggilan aku ke kamu.</p>
+      <input type="password" id="keywordInput" placeholder="Masukkan kata kunci...">
+      <button onclick="checkKeyword()">Masuk</button>
+      <div id="errorMsg" class="error-msg"></div>
+    </div>
+  </div>
+
+  <div id="app">
+    <div class="topbar" aria-hidden="true">
+      <div class="badge">Private Program</div>
+      <div class="track"><span id="progressBar"></span></div>
+      <div class="step" id="stepLabel">1/6</div>
+    </div>
+
+    <div id="section1" class="section-container">
+      <div class="section">
+        <h2>💭 Pertanyaan Penting</h2>
+        <p class="section-text">siapa manusia terganteng di bumi?</p>
+        <input id="answer1" class="section-input" type="text" placeholder="Tulis jawaban kamu..."><p id="answerFeedback" class="section-text" aria-live="polite"></p>
+        <button class="btn btn-primary" onclick="checkAnswer1()">Jawab</button>
+      </div>
+    </div>
+
+    <div id="section2" class="section-container">
+      <div class="section">
+        <h2>🎵 Musik Spesial</h2>
+        <div class="music-section">
+          <p class="music-text">supaya sayang lebih nyaman nanti, sambil dengerin musik ini spesial banget buat kamu</p>
+          <button class="music-toggle" onclick="toggleMusic(this)">▶️ Mulai Musik</button>
+          <div id="musicPlayer" class="music-player">
+            <div class="now-playing">
+              <span class="equalizer" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </span>
+              <span>🎶 Aashiqui - Special For You</span>
+              <span class="equalizer" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </span>
+            </div>
+            <audio id="audioPlayer" controls preload="auto" playsinline loop>
+              <source src="assets/audio.mp3" type="audio/mpeg">
+              Browser Anda tidak support audio player
+            </audio>
+            <p style="color: var(--muted); margin: 2px 0 0; text-align: center; font-size: 12px;">💭 Musik khusus untuk orang spesial...</p>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="margin-top: 20px;" onclick="goToSection(3)">next</button>
+      </div>
+    </div>
+
+    <div id="section3" class="section-container">
+      <div class="section">
+        <h2>📸 lihat ini dia orang cantik yang ulang tahun</h2>
+        <div class="gallery" id="gallery"></div>
+        <div class="gallery-counter" id="galleryCounter"></div>
+        <button class="btn btn-primary" style="margin-top: 20px;" onclick="goToSection(4)">Lanjut</button>
+      </div>
+    </div>
+
+    <div id="section4" class="section-container">
+      <div class="section">
+        <h2>⏰ Waktu Bersama Kita</h2>
+        <div class="counter" id="counter"></div>
+        <p class="section-text" style="text-align: center;">mungkin ini belum seberapa yah sayang tapi ini cukup menguras sabar kamu selama sama aku, terima kasih banyak. setelah ini tolong lebih sabar lagi yah</p>
+        <button class="btn btn-primary" onclick="goToSection(5)">Baca Pesan Untukmu</button>
+      </div>
+    </div>
+
+    <div id="section5" class="section-container">
+      <div class="section">
+        <h2>💌 Pesan Untuk Orang Cantik</h2>
+        <p class="section-text">mau tau apa isi pesannya? jawab dulu kamu sayang aku</p>
+        <input id="messageKey" class="section-input" placeholder="">
+        <button class="btn btn-primary" onclick="unlockMessage()">Buka Pesan</button>
+        <div id="messageBox" class="message-box" style="display: none; margin-top: 20px;">
+          <div id="messageContent" class="message-content"></div>
+        </div>
+        <div id="finalGate" class="final-gate">
+          <button id="finalBtn" class="btn btn-primary" style="margin-top: 20px;" onclick="goToSection(6)">Akhir</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="section6" class="section-container">
+      <div class="section">
+        <h2>👋 TAMAT</h2>
+        <p class="section-text">terima kasih sudah membaca sampai akhir, semoga tidak jengkel tapi sepertinya begitu hahaha, okey byebye sayang, terima kasih terima kasih, aku sayang kamuu</p>
+        <button class="btn btn-primary" onclick="showClosing()">Tutup Program</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="closeScreen" class="close-screen">
+    <div class="close-content">
+      <h2>⚠️ PROGRAM CLOSED</h2>
+      <p style="color: var(--muted); font-size: 16px; margin: 0;">byebye tuaa, cebol, pendek, tapi cantik sih loooveeeee youuuuuu💕</p>
+      <button class="close-btn" onclick="location.reload()">Mulai Ulang</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    const KEYWORDS = ['sayangku', 'cintaku', 'cantikku', 'cebol', 'pendek'];
+    const PHOTOS = [
+      { url: 'assets/photo01.jpg', caption: 'lihat sayang, ini manis banget jatuh cinta sejatuh jatuhnya aku sama senyum kamu' },
+      { url: 'assets/photo02.jpg', caption: 'setiap hari manis manis ini manis banget, sayang gak bosan apa yah? kamu manis banget sayang' },
+      { url: 'assets/photo03.jpg', caption: 'ini aku paling suka sih sayang, suka lihat gigi kelincinya, sayang imut manis kiyutt' },
+      { url: 'assets/photo04.jpg', caption: 'nih lucu banget kamuuuuu, cantik banget cantik cantik' },
+      { url: 'assets/photo05.jpg', caption: 'ini juga sudah mah kedip senyum lagi, apa kabar hati imut aku ini, tidak kuattt kamu lucu banget' },
+      { url: 'assets/photo06.jpg', caption: 'tuh sayang gak bisa banget berhenti meresahkan senyumnya' },
+      { url: 'assets/photo07.jpg', caption: 'ini juga cantiknya nantang gitu sayang, kamu kayak bilang hai ganteng gitu, aku memang ganteng sih sayang, terima kasih' },
+      { url: 'assets/photo08.jpg', caption: 'lihat sayang, aku paling jatuh cinta sama foto yang ini, sayang cantik banget disini, demi apa pun kamu cantiknya kebangetan sayang' },
+      { url: 'assets/photo09.jpg', caption: 'ini juga bener bener bahaya sayang, manisnya bahaya banget bikin diabetes ini, sayang manis banget' },
+      { url: 'assets/photo10.jpg', caption: 'dann yaah ini terakhir, selalu cantik seperti ini yah sayang, manis teruss, makin lucuuuu, love youu sayang akuu' },
+    ];
+
+    const START_DATE = new Date(2026, 3, 6);
+    const TOTAL_SECTIONS = 6;
+    let currentSection = 1;
+    let musicPlaying = false;
+    let currentPhotoIndex = 0;
+    let counterTimer = null;
+    let sparkInterval = null;
+    let balloonInterval = null;
+    let galleryAutoTimer = null;
+    let captionTimer = null;
+    let hackerTimers = [];
+
+    const $ = (id) => document.getElementById(id);
+
+    function updateTopbar() {
+      const progress = Math.max(1, Math.min(TOTAL_SECTIONS, currentSection));
+      const pct = ((progress - 1) / (TOTAL_SECTIONS - 1)) * 100;
+      $('progressBar').style.width = pct + '%';
+      $('stepLabel').textContent = `${progress}/${TOTAL_SECTIONS}`;
+    }
+
+    function showToast(message, duration = 2200) {
+      const toast = $('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.className = 'love-balloon';
+      const emojis = ['💕', '✨', '💗', '💞'];
+      balloon.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      balloon.style.left = Math.random() * 100 + '%';
+      balloon.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      balloon.style.animationDelay = Math.random() * 0.5 + 's';
+      balloon.style.fontSize = (18 + Math.random() * 10) + 'px';
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 7500);
+    }
+
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.top = Math.random() * 100 + '%';
+      sparkle.style.width = sparkle.style.height = (3 + Math.random() * 5) + 'px';
+      sparkle.style.animationDuration = (1.8 + Math.random() * 1.6) + 's';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 3400);
+    }
+
+    function startAmbientEffects() {
+      if (!balloonInterval) balloonInterval = setInterval(createBalloon, 620);
+      if (!sparkInterval) sparkInterval = setInterval(createSparkle, 420);
+    }
+
+    function initHackerRain() {
+      const wrap = document.querySelector('.hacker-rain');
+      if (!wrap || wrap.childElementCount) return;
+
+      const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*<>/\\[]{}~!@^+=-';
+      const streamCount = 72;
+      for (let i = 0; i < streamCount; i++) {
+        const stream = document.createElement('span');
+        stream.className = 'stream';
+        const len = 18 + Math.floor(Math.random() * 22);
+        let text = '';
+        for (let j = 0; j < len; j++) {
+          text += chars[Math.floor(Math.random() * chars.length)];
+          text += j % 2 === 0 ? '\n' : '';
+        }
+        stream.textContent = text;
+        stream.style.left = (Math.random() * 100).toFixed(2) + '%';
+        stream.style.animationDuration = (6 + Math.random() * 7).toFixed(2) + 's';
+        stream.style.animationDelay = (-Math.random() * 12).toFixed(2) + 's';
+        stream.style.fontSize = (10 + Math.random() * 6).toFixed(1) + 'px';
+        stream.style.opacity = (0.25 + Math.random() * 0.55).toFixed(2);
+        wrap.appendChild(stream);
+      }
+
+      hackerTimers.push(setInterval(() => {
+        if (!document.body.contains(wrap)) return;
+        const streams = wrap.querySelectorAll('.stream');
+        streams.forEach((stream, idx) => {
+          if (Math.random() < 0.12) {
+            const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*<>/\\[]{}~!@^+=-';
+            const len = 18 + Math.floor(Math.random() * 22);
+            let text = '';
+            for (let j = 0; j < len; j++) {
+              text += chars[Math.floor(Math.random() * chars.length)];
+              text += j % 2 === 0 ? '\n' : '';
+            }
+            stream.textContent = text;
+            stream.style.animationDuration = (6 + Math.random() * 7).toFixed(2) + 's';
+          }
+        });
+      }, 1200));
+    }
+
+    function stopGalleryAuto() {
+      if (galleryAutoTimer) {
+        clearInterval(galleryAutoTimer);
+        galleryAutoTimer = null;
+      }
+      if (captionTimer) {
+        clearInterval(captionTimer);
+        captionTimer = null;
+      }
+    }
+
+    function startMusicPlayback(btn) {
+      const player = $('musicPlayer');
+      const audio = $('audioPlayer');
+      if (!btn) btn = document.querySelector('.music-toggle');
+
+      player.classList.add('show');
+      audio.loop = true;
+      audio.preload = 'auto';
+      audio.volume = 1;
+
+      const attempt = audio.play();
+      if (attempt && typeof attempt.then === 'function') {
+        attempt.then(() => {
+          musicPlaying = true;
+          player.classList.add('playing');
+          if (btn) btn.textContent = '⏸️ Jeda Musik';
+        }).catch(err => {
+          console.warn('Audio play failed:', err);
+          showToast('Browser menolak autoplay, tekan tombol play di pemutar audio.');
+          musicPlaying = false;
+          player.classList.remove('playing');
+          if (btn) btn.textContent = '▶️ Mulai Musik';
+        });
+      } else {
+        musicPlaying = true;
+        player.classList.add('playing');
+        if (btn) btn.textContent = '⏸️ Jeda Musik';
+      }
+
+      audio.onended = () => {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      };
+    }
+
+
+    function checkKeyword() {
+      const input = $('keywordInput').value.toLowerCase().trim();
+      const errorMsg = $('errorMsg');
+
+      if (KEYWORDS.includes(input)) {
+        $('lockScreen').style.display = 'none';
+        $('app').style.display = 'block';
+        startAmbientEffects();
+        initHackerRain();
+        goToSection(1, true);
+        
+        showToast('Kata kunci benar. Program dibuka.');
+      } else {
+        errorMsg.textContent = '❌ Kata kunci salah, coba lagi sayang';
+      }
+    }
+
+    function checkAnswer1() {
+      const feedback = $('answerFeedback');
+      feedback.textContent = 'hehe, jawaban kamu diterima sayangku 💗 lanjut yaa...';
+      feedback.style.color = 'var(--mint)';
+      // Jawaban apa pun tetap boleh lanjut ke halaman berikutnya.
+      setTimeout(() => goToSection(2), 700);
+    }
+
+    function goToSection(section, initial = false) {
+      document.querySelectorAll('.section-container').forEach(el => el.classList.remove('active'));
+      const target = $('section' + section);
+      target.classList.add('active');
+      currentSection = section;
+      updateTopbar();
+
+      if (section === 2) {
+        const player = $('musicPlayer');
+        const btn = document.querySelector('.music-toggle');
+        if (player) {
+          player.classList.toggle('show', musicPlaying);
+          player.classList.toggle('playing', musicPlaying);
+        }
+        if (btn) btn.textContent = musicPlaying ? '⏸️ Jeda Musik' : '▶️ Mulai Musik';
+      } else {
+        const player = $('musicPlayer');
+        if (player) {
+          const btn = document.querySelector('.music-toggle');
+          if (btn && musicPlaying) btn.textContent = '⏸️ Jeda Musik';
+        }
+      }
+
+      if (section === 3) {
+        loadPhotos();
+        currentPhotoIndex = 0;
+        stopGalleryAuto();
+        updateGalleryDisplay(true);
+        galleryAutoTimer = setInterval(() => {
+          if (currentSection === 3 && currentPhotoIndex < PHOTOS.length - 1) {
+            currentPhotoIndex++;
+            updateGalleryDisplay(true);
+          } else if (currentSection === 3 && currentPhotoIndex >= PHOTOS.length - 1) {
+            currentPhotoIndex = 0;
+            updateGalleryDisplay(true);
+          }
+        }, 6500);
+      } else {
+        stopGalleryAuto();
+      }
+
+      if (section === 4) updateCounter();
+      window.scrollTo({ top: 0, behavior: initial ? 'auto' : 'smooth' });
+    }
+
+    async function toggleMusic(btn) {
+      const player = $('musicPlayer');
+      const audio = $('audioPlayer');
+      btn = btn || document.querySelector('.music-toggle');
+
+      if (!musicPlaying) {
+        try {
+          player.classList.add('show');
+          audio.loop = true;
+          audio.load();
+          const playPromise = audio.play();
+          if (playPromise && typeof playPromise.then === 'function') await playPromise;
+          musicPlaying = true;
+          player.classList.add('playing');
+          if (btn) btn.textContent = '⏸️ Jeda Musik';
+          showToast('Musik diputar.');
+        } catch (err) {
+          player.classList.add('show');
+          player.classList.remove('playing');
+          musicPlaying = false;
+          if (btn) btn.textContent = '▶️ Mulai Musik';
+          showToast('Browser menolak autoplay, tekan play di pemutar audio.');
+          console.warn('Audio play failed:', err);
+        }
+      } else {
+        audio.pause();
+        musicPlaying = false;
+        player.classList.remove('playing');
+        if (btn) btn.textContent = '▶️ Mulai Musik';
+        showToast('Musik dijeda.');
+      }
+    }
+
+    function typeCaption(captionEl, text) {
+      if (!captionEl) return;
+      if (captionTimer) clearInterval(captionTimer);
+      const typed = captionEl.querySelector('.caption-typed');
+      const cursor = captionEl.querySelector('.caption-cursor');
+      if (!typed || !cursor) return;
+
+      typed.textContent = '';
+      cursor.style.display = 'inline-block';
+
+      let i = 0;
+      captionTimer = setInterval(() => {
+        if (i < text.length) {
+          typed.textContent += text[i++];
+          captionEl.parentElement.scrollTop = captionEl.parentElement.scrollHeight;
+        } else {
+          clearInterval(captionTimer);
+          captionTimer = null;
+          setTimeout(() => { cursor.style.display = 'none'; }, 450);
+        }
+      }, 46 + Math.min(20, Math.floor(text.length / 16)));
+    }
+
+    function loadPhotos() {
+      const gallery = $('gallery');
+      gallery.innerHTML = '';
+
+      PHOTOS.forEach((photo, index) => {
+        const container = document.createElement('div');
+        container.className = 'photo-container';
+        if (index === 0) container.classList.add('active');
+
+        const img = document.createElement('img');
+        img.src = photo.url;
+        img.alt = `Foto ${index + 1}`;
+        img.loading = index === 0 ? 'eager' : 'lazy';
+        img.decoding = 'async';
+        img.onerror = function() {
+          this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23333" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" fill="%23999" text-anchor="middle" dy=".3em"%3EFoto tidak dapat dimuat%3C/text%3E%3C/svg%3E';
+        };
+
+        const caption = document.createElement('div');
+        caption.className = 'photo-caption';
+        caption.innerHTML = '<span class="caption-typed"></span><span class="caption-cursor">▍</span>';
+        caption.dataset.text = photo.caption;
+
+        container.appendChild(img);
+        container.appendChild(caption);
+        gallery.appendChild(container);
+      });
+    }
+
+    function updateGalleryDisplay(silent = false) {
+      const containers = document.querySelectorAll('.photo-container');
+      containers.forEach((container, index) => {
+        const active = index === currentPhotoIndex;
+        container.classList.toggle('active', active);
+        if (active) {
+          const caption = container.querySelector('.photo-caption');
+          if (caption) {
+            const cursor = caption.querySelector('.caption-cursor');
+            if (cursor) cursor.style.display = 'inline-block';
+            typeCaption(caption, caption.dataset.text || '');
+          }
+        }
+      });
+      $('galleryCounter').textContent = `${currentPhotoIndex + 1} / ${PHOTOS.length}`;
+      if (!silent) showToast(`Foto ${currentPhotoIndex + 1} dari ${PHOTOS.length}`);
+    }
+
+    function nextPhoto() {
+      if (currentPhotoIndex < PHOTOS.length - 1) {
+        currentPhotoIndex++;
+        updateGalleryDisplay();
+      }
+    }
+
+    function previousPhoto() {
+      if (currentPhotoIndex > 0) {
+        currentPhotoIndex--;
+        updateGalleryDisplay();
+      }
+    }
+
+    function updateCounter() {
+      if (counterTimer) clearInterval(counterTimer);
+      const counter = $('counter');
+
+      function updateDisplay() {
+        const now = new Date();
+        const diff = Math.max(0, Math.floor((now - START_DATE) / 1000));
+        const days = Math.floor(diff / 86400);
+        const hours = Math.floor((diff % 86400) / 3600);
+        const minutes = Math.floor((diff % 3600) / 60);
+        const seconds = diff % 60;
+
+        counter.innerHTML = `
+          <div class="counter-item">
+            <div class="counter-number">${String(days).padStart(3, '0')}</div>
+            <div class="counter-label">Hari</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number">${String(hours).padStart(2, '0')}</div>
+            <div class="counter-label">Jam</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number">${String(minutes).padStart(2, '0')}</div>
+            <div class="counter-label">Menit</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number">${String(seconds).padStart(2, '0')}</div>
+            <div class="counter-label">Detik</div>
+          </div>
+        `;
+      }
+
+      updateDisplay();
+      counterTimer = setInterval(updateDisplay, 1000);
+    }
+
+    function unlockMessage() {
+      const input = $('messageKey').value.toLowerCase().trim();
+      const messageBox = $('messageBox');
+      const finalGate = $('finalGate');
+
+      if (input.includes('sayang aku') || input.includes('aku sayang kamu')) {
+        messageBox.style.display = 'block';
+        if (finalGate) {
+          finalGate.classList.remove('show');
+          finalGate.style.display = 'none';
+        }
+        typeMessage();
+      } else {
+        alert('Jawab dulu kamu sayang aku ya, sayang 😊');
+      }
+    }
+
+    function typeMessage() {
+      const messageContent = $('messageContent');
+      const finalGate = $('finalGate');
+      if (messageContent.classList.contains('show')) return;
+      if (finalGate) {
+        finalGate.classList.remove('show');
+        finalGate.style.display = 'none';
+      }
+
+      const fullMessage = `yeyy, Selamat ulang tahun sayang ku, sudah beneran makin tua. hai tuaaaaaaa aku mau bilang apa yah, aku mau mengarang bebas aja sayang, buat cerpen biar kamu kapok bacanya, okey di mulai
+
+aku mau ucapin buat pacar aku yang manis banget, manisnya tiada tanding. selamat bertambah usia sayang, aku yang masih muda ini berharap semoga di umur sayang yang sudah tua seperti sekarang ini ada lebih banyak banyak dan banyak hal baik yang datang ke hidup kamu, aku salah satunya sih sayang, gak baik baik amat, tapi sudah pasti baik. semogaaa sayang selalu dikasih kebahagiaan lebih lebih lebih pokoknya lebih dari sekarang, selalu dikasih kesehatan, kemudahan buat setiap urusan dan kerjaannya sayang, termasuk semangat untuk setiap harinya menghadapi murid yang bandel bandel itu yang setiap hari menguras energi pacar aku. semoga sabar dan sayang kamu ke aku makin luass, sabar nunggu aku setiap harinya, sabar menghadapi sikap aku yang sering kayak kemasukan jin, pokoknya makin tua sayang juga harus makin sabar makin sayang sayang dan sayaaaaaang sama aku, dan akupun sama seperti itu. pokoknya segala hal yang sayang harapkan yang sayang rencanakan aku masuk bagian tim aminkannya okey. daannnnn, mau bilang juga, ini kita sudah lumayan lama yah sayang biarpun sebagian orang ngira enam bulan itu belum seberapa, tapi buat aku waktu yang selama itu sudah buat aku betul betul punya orang spesial buat aku, jadi tempat pulang juga mungkin? iyaaaaaaa kamu sudah jadi rumah buat aku sayang, maaf agak alay tapi beneran sama kamu aku sudah bisa berkelu kesah, sayang juga terus begitu ke aku yah? hal sekecil apapun berbagi ke aku sayang, aku siap menjadi pendengar yang baik, sedikit mengejek juga hehehe.
+
+sayang harus tau salah satu hal yang aku benar benar aku suka dari kamu,kesabaran kamu sayang serius kamu sesabar itu, cara kamu ngadepin aku tiap kita lagi ribut cara kamu ingetin aku pemikiran kamu yangg dewasa bangett, pokoknya kurang banyak ada cewek bisa mikirnya kayak kamu sayang. sayang selalu bisa pahami keadaan gak lihat dari satu sisi aja tiap ada masalah. tapi tapi bagian lucunya kamu nih yah, makin kesini aku ngerasa kalau sayang juga makin manja sama ngambekan sama aku, padahal sudah tua yah inii malah sikapnya jadi kayak bocil his his his padahal sebelumnya anteng aja sekarang rewelan tapi suka kalau sayang begitu, kayak seneng aja gitu di luar kalau lagi sama orang lain, kayak di sekolah terus di rumah itu bener bener dewasa, jadi wanita independen gituu tapi sama aku malah sebaliknya, keren sayang, pacar aku kerennn bangettt tapi masih lebih kerenan aku sih maaf banget ini faktanya. tapi tapi aku minta maaf juga yah sayang kalau kadang masih gak ngertiin kadang ngambeknya sayang juga masih aku salah artikan jadinya malah balik betein.
+
+jadi jadi sayang, buat kamuu buat hubungan kitaa akuu mau bilang semoga dengan datangnya aku di hidup sayang gak menjadi beban tambahan tapi bisa kasih kesan yang baik jadi kebahagiaan tersendiri buat kita satu sama lain. kita juga pasti tau kan sayang seiring jalannya waktu kita bakal semakin kenal satu sama lain dari kebiasaan sifat dan sikap yang belum sepenuhnya kita saling tau, termasuk kekurangan yang mungkin belum nampak sepenuhnya, bakal ada perbedaan pendapat, ada salah paham, ada waktu ketika salah satu dari kita ada yang capek sensitif dari biasanya hmm ini aku sih yang keseringan begitu hehehe tapi sayang aku harap kita bisa saling ingatkan, saling dengerin saling terima yah selesaiin masalahnya sedingin mungkin otaknya jangan capek, jangan berhenti sabar sama aku yang kadang nyebelin yaah cintaa INGET SAYANG SUDAH TUA DAN LEBIH TUA DARI AKU JADI HARUS INGATKAN ANAK KECIL SEPERTI AKU YANG SUKA BANDEL HEHE, aku gak bisa janji sayang gak bisa juga cuma sekedar ngomong buat perlakuin kamu dengan baik tapi aku usahain sayang buat jadi diri aku di versi terbaik buat kamu,
+
+terima kasih yah, terima kasih banyak, terus jadi diri kamu yang seperti ini yah sayang, kamu yang selalu cantik setiap harinya, yang selalu punya cerita random, selalu excited, selalu cerewet ke akuuuu, selaluu bilang kangeeeeenn sama akuu, aku sayang kamu banget banget, pokoknya sayang sayang sayang dan sayang terus, i loveeee youuu
+
+sekali lagi selamat ulang tahun buat kamu, pacar aku, buat sayangnya aku, cintanya aku, cantiknya akuu, selamat selamat selamat selamat ulang tahun selamat bertambah tua, panjang umurrrrr pokoknyaa, harus bahagia terus, harus lebih bahagia lagi ada aku soalnya daaann paling penting ini, TOLONG SAYANG AKU TERUS YAAAH LOVEEE YOU LOVE YOUUU SOOO MUUUUCCHHH`;
+
+      messageContent.innerHTML = '';
+      messageContent.classList.add('show');
+
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      cursor.textContent = '▍';
+      messageContent.appendChild(cursor);
+
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < fullMessage.length) {
+          const char = fullMessage[index++];
+          if (char === '\n') {
+            messageContent.insertBefore(document.createElement('br'), cursor);
+          } else {
+            messageContent.insertBefore(document.createTextNode(char), cursor);
+          }
+          messageContent.parentElement.scrollTop = messageContent.parentElement.scrollHeight;
+        } else {
+          clearInterval(interval);
+          if (cursor.parentNode) cursor.remove();
+          setTimeout(() => {
+            if (finalGate) {
+              finalGate.style.display = 'block';
+              requestAnimationFrame(() => finalGate.classList.add('show'));
+            }
+          }, 1200);
+        }
+      }, 38);
+    }
+
+    function showClosing() {
+      document.getElementById('app').style.display = 'none';
+      document.getElementById('closeScreen').classList.add('show');
+      showToast('Program ditutup.');
+    }
+
+    document.getElementById('keywordInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') checkKeyword();
+    });
+
+    document.getElementById('answer1').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); checkAnswer1(); }
+    });
+
+    document.getElementById('messageKey').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') unlockMessage();
+    });
+
+    updateTopbar();
+
+    // Keep music alive through the whole session.
+    const audioEl = $('audioPlayer');
+    if (audioEl) {
+      audioEl.loop = true;
+      audioEl.addEventListener('ended', () => {
+        audioEl.currentTime = 0;
+        audioEl.play().catch(() => {});
+      });
+      audioEl.addEventListener('pause', () => {
+        if (musicPlaying && currentSection !== 6) {
+          // user paused it manually; keep the button state in sync
+          const btn = document.querySelector('.music-toggle');
+          if (btn) btn.textContent = '▶️ Mulai Musik';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
